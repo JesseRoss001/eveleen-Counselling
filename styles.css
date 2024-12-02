@@ -2,190 +2,264 @@
 
 /* Define custom colors */
 :root {
-    --primary-color: #FF0000; /* Red */
-    --secondary-color: #00AEEF; /* Waterfall Blue */
-    --text-color: #333;
-  }
+  --primary-color: #1D3557; /* Dark Blue */
+  --secondary-color: #E63946; /* Dark Red */
+  --accent-color: #F1FAEE; /* White Accent */
+  --text-color: #333;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: rgba(29, 53, 87, 0.9); /* Dark Blue with opacity */
+  padding: 1rem 0;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar.fixed-top.scrolled {
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  color: var(--accent-color);
+  margin-left: 1rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--secondary-color);
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.navbar-nav .btn {
+  margin-left: 1rem;
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.navbar-nav .btn:hover,
+.navbar-nav .btn:focus {
+  background-color: #d62828;
+  border-color: #d62828;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  background-image: url('https://via.placeholder.com/1920x1080'); /* Replace with actual image */
+  background-size: cover;
+  background-position: center;
+  color: var(--accent-color);
+  padding: 150px 0 100px 0;
+  position: relative;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(29, 53, 87, 0.7); /* Overlay with dark blue */
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Section Titles */
+section h2 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  position: relative;
   
-  /* Global Styles */
-  body {
-    font-family: 'Montserrat', sans-serif;
-    color: var(--text-color);
-    scroll-behavior: smooth;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  margin-top: 8px;
+translate: translateX(50%);
+margin-left:auto;
+margin-right: auto;
+}
+
+/* Therapy Cards */
+.therapy-card {
+  transition: transform 0.3s;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.therapy-card:hover {
+  transform: translateY(-10px);
+}
+
+.therapy-card .icon {
+  color: var(--secondary-color);
+}
+
+.therapy-card .card-title {
+  color: var(--primary-color);
+  margin-top: 10px;
+}
+
+.therapy-card .card-text {
+  color: var(--text-color);
+}
+
+/* Areas of Support */
+.support-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.support-item {
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.support-item:hover {
+  transform: translateY(-10px);
+}
+
+.support-item i {
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+}
+
+.support-item h5 {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+/* Pricing Section */
+.pricing-card {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.pricing-card .price {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.pricing-card p {
+  color: var(--text-color);
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #d62828;
+  border-color: #d62828;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+footer a {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #ccc;
+}
+
+/* Animations */
+.animate__animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .navbar-nav {
+    background-color: var(--primary-color);
+    padding: 1rem;
   }
-  
-  /* Navbar Styles */
-  .navbar {
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 1rem 0;
-    transition: background-color 0.3s, box-shadow 0.3s;
+
+  .navbar-collapse {
+    border-top: 1px solid #eee;
   }
-  
-  .navbar.fixed-top.scrolled {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .navbar-brand {
-    color: var(--primary-color);
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-  
-  .navbar-nav .nav-link {
-    color: var(--text-color);
-    margin-left: 1rem;
-  }
-  
-  .navbar-nav .nav-link:hover,
-  .navbar-nav .nav-link:focus {
-    color: var(--primary-color);
-  }
-  
-  .navbar-nav .nav-link.active {
-    color: var(--primary-color);
-    font-weight: bold;
-  }
-  
-  .navbar-nav .btn {
-    margin-left: 1rem;
-  }
-  
-  /* Hero Section Styles */
+
   .hero-section {
-    background-image: url('https://via.placeholder.com/1920x1080'); /* Replace with actual image */
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    padding: 150px 0 100px 0;
-    position: relative;
+    padding: 100px 0 80px 0;
   }
-  
-  .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .hero-section .container {
-    position: relative;
-    z-index: 2;
-  }
-  
+
   .hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
   }
-  
+
   .hero-section p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-size: 1.2rem;
   }
-  
-  /* Section Titles */
-  section h2 {
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-  }
-  
-  /* About Me Styles */
-  .about-me ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .about-me ul li {
-    margin-bottom: 0.5rem;
-    position: relative;
-    padding-left: 20px;
-  }
-  
-  .about-me ul li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--primary-color);
-  }
-  
-  /* Areas of Support and Therapies Offered */
-  .fa-ul .fa-li {
-    color: var(--primary-color);
-  }
-  
-  .fa-ul li {
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Buttons */
-  .btn-primary {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-  }
-  
-  .btn-primary:hover,
-  .btn-primary:focus {
-    background-color: darken(var(--primary-color), 10%);
-    border-color: darken(var(--primary-color), 10%);
-  }
-  
-  /* Footer Styles */
-  footer {
-    background-color: var(--primary-color);
-    color: #fff;
-  }
-  
-  footer a {
-    color: #fff;
-    text-decoration: underline;
-  }
-  
-  footer a:hover,
-  footer a:focus {
-    color: #ccc;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 767px) {
-    .navbar-nav {
-      background-color: #fff;
-      padding: 1rem;
-    }
-  
-    .navbar-collapse {
-      border-top: 1px solid #eee;
-    }
-  
-    .hero-section {
-      padding: 100px 0 80px 0;
-    }
-  
-    .hero-section h1 {
-      font-size: 2.5rem;
-    }
-  
-    .hero-section p {
-      font-size: 1.2rem;
-    }
-  }
-  
-  /* Additional Styles */
-  .section {
-    padding: 60px 0;
-  }
-  
-  .section.bg-light {
-    background-color: #f8f9fa;
-  }
-  
-  .text-white a {
-    color: #fff;
-  }
-  
-  .text-white a:hover {
-    color: #ddd;
-  }
-  
+}
+
+/* Additional Styles */
+.section {
+  padding: 60px 0;
+}
+
+.section.bg-light {
+  background-color: #f8f9fa;
+}
+
+.text-white a {
+  color: #fff;
+}
+
+.text-white a:hover {
+  color: #ddd;
+}

@@ -19,13 +19,11 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet"
   >
-  <!-- Custom CSS -->
-  <link href="styles.css" rel="stylesheet">
-  <!-- Google Fonts -->
+  <!-- Animate.css -->
   <link
-    href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
     rel="stylesheet"
-  >
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <!-- Font Awesome Icons -->
   <link
     rel="stylesheet"
@@ -34,11 +32,18 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+<script src="https://kit.fontawesome.com/340c015442.js" crossorigin="anonymous"></script>
+  <!-- Custom CSS -->
+  <link href="styles.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+    rel="stylesheet"
+  >
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
-
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
     <div class="container">
       <a class="navbar-brand" href="#">Eveleen Counselling</a>
       <button
@@ -55,22 +60,22 @@
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#intro">What I Offer</a>
+            <a class="nav-link active" href="#intro">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about">Who I Am</a>
+            <a class="nav-link" href="#therapies">Therapies</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#support">Areas of Support</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#therapies">Therapies Offered</a>
+            <a class="nav-link" href="#about">About Me</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#next-steps">Next Steps</a>
+            <a class="nav-link" href="#pricing">Pricing</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-primary text-white" href="#contact">Contact Me</a>
+            <a class="nav-link btn btn-primary text-white" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -80,43 +85,90 @@
   <!-- Hero Section -->
   <section class="hero-section d-flex align-items-center" id="intro">
     <div class="container text-center">
-      <h1 class="display-4">Welcome to Eveleen Counselling</h1>
-      <p class="lead">
-        Are you feeling anxious, lost, shame, grief, overwhelmed about a decision, depressed about repeating the same patterns, experiencing stress?
+      <h1 class="display-4 animate__animated animate__fadeInDown">Welcome to Eveleen Counselling</h1>
+      <p class="lead animate__animated animate__fadeInUp">
+        Professional remote therapy services to help you navigate life's challenges.
       </p>
-      <a href="#contact" class="btn btn-primary btn-lg">Get in Touch</a>
+      <a href="#contact" class="btn btn-primary btn-lg animate__animated animate__fadeInUp">Get in Touch</a>
     </div>
   </section>
 
-  <!-- About Me Section -->
-  <section class="about-me py-5" id="about">
+  <!-- Therapies Offered Section -->
+  <section class="therapies-offered py-5" id="therapies">
     <div class="container">
-      <h2 class="text-center mb-5">Who I Am</h2>
-      <div class="row align-items-center">
-        <div class="col-md-5">
-          <!-- Placeholder for Profile Image -->
-          <img
-            src="https://via.placeholder.com/400x400"
-            alt="Eveleen"
-            class="img-fluid rounded-circle mb-4 mb-md-0"
-          >
+      <h2 class="text-center mb-5 mx-auto">Therapies Offered</h2>
+      <div class="row g-4">
+        <!-- Therapy Card 1 -->
+        <div class="col-md-4">
+          <div class="card therapy-card h-100 animate__animated animate__fadeInUp">
+            <div class="card-body text-center">
+              <div class="icon mb-3">
+                <i class="fas fa-brain fa-3x"></i>
+              </div>
+              <h5 class="card-title">Behavioural Therapy</h5>
+              <p class="card-text">Focuses on changing negative behaviors through conditioning techniques.</p>
+            </div>
+          </div>
         </div>
-        <div class="col-md-7">
-          <p>
-            I'm Eveleen, a registered counsellor (British Association for Counselling and Psychotherapy) and also an artist. To me, those two elements are connected and provide effective support in wellbeing. I offer remote counselling services across Anglesey and Gwynedd.
-          </p>
-          <h4>Qualifications & Experience</h4>
-          <ul>
-            <li>Registered Member of the BACP (British Association for Counselling and Psychotherapy)</li>
-            <li>MSc Counselling, BSc Psychology</li>
-            <li>Cruse Bereavement Service</li>
-            <li>Trained in Bereavement Counselling (Cruse)</li>
-            <li>Counselling NHS</li>
-            <li>Women's Health and Changes of Life (perimenopause, menopause, pregnancy, post-pregnancy)</li>
-            <li>Infant Loss Foundation Certificate</li>
-            <li>Training in Pregnancy and Infant Loss</li>
-            <!-- Add more qualifications as needed -->
-          </ul>
+        <!-- Therapy Card 2 -->
+        <div class="col-md-4">
+          <div class="card therapy-card h-100 animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+            <div class="card-body text-center">
+              <div class="icon mb-3">
+                <i class="fas fa-comments fa-3x"></i>
+              </div>
+              <h5 class="card-title">Psychodynamic Therapy</h5>
+              <p class="card-text">Explores unconscious feelings and childhood experiences to understand current behaviors.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Therapy Card 3 -->
+        <div class="col-md-4">
+          <div class="card therapy-card h-100 animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+            <div class="card-body text-center">
+              <div class="icon mb-3">
+                <i class="fas fa-user-circle fa-3x"></i>
+              </div>
+              <h5 class="card-title">Person-Centred Therapy</h5>
+              <p class="card-text">Empowers clients to find their own solutions in a supportive environment.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Therapy Card 4 -->
+        <div class="col-md-4">
+          <div class="card therapy-card h-100 animate__animated animate__fadeInUp">
+            <div class="card-body text-center">
+              <div class="icon mb-3">
+                <i class="fas fa-hand-holding-heart fa-3x"></i>
+              </div>
+              <h5 class="card-title">Integrative Counselling</h5>
+              <p class="card-text">Combines different therapeutic approaches to suit your individual needs.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Therapy Card 5 -->
+        <div class="col-md-4">
+          <div class="card therapy-card h-100 animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+            <div class="card-body text-center">
+              <div class="icon mb-3">
+                <i class="fas fa-walking fa-3x"></i>
+              </div>
+              <h5 class="card-title">Walk and Talk Therapy</h5>
+              <p class="card-text">Sessions conducted outdoors, combining physical movement with emotional exploration.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Therapy Card 6 -->
+        <div class="col-md-4">
+          <div class="card therapy-card h-100 animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+            <div class="card-body text-center">
+              <div class="icon mb-3">
+                <i class="fas fa-leaf fa-3x"></i>
+              </div>
+              <h5 class="card-title">Somatic Therapy</h5>
+              <p class="card-text">Focuses on the connection between mind and body to address psychological and physical symptoms.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -126,87 +178,142 @@
   <section class="areas-of-support py-5 bg-light" id="support">
     <div class="container">
       <h2 class="text-center mb-5">I Can Support You With</h2>
-      <div class="row">
-        <div class="col-md-6">
-          <ul class="fa-ul">
-            <!-- Left Column Items -->
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Anxiety</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Relationship Issues</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Depression</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Stress</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Unpaid Carers</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Bereavement</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Loss</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Trauma</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Body Changes</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Infant or Pregnancy Loss</li>
+      <div class="row g-4">
+        <!-- Support Item -->
+        <div class="col-md-3 col-sm-6">
+          <div class="support-item text-center animate__animated animate__fadeInUp">
+            <i class="fas fa-heartbeat fa-3x text-secondary"></i>
+            <h5>Anxiety</h5>
+          </div>
+        </div>
+        <!-- Support Item -->
+        <div class="col-md-3 col-sm-6">
+          <div class="support-item text-center animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+            <i class="fas fa-heart-broken fa-3x text-secondary"></i>
+            <h5>Relationship Issues</h5>
+          </div>
+        </div>
+        <!-- Support Item -->
+        <div class="col-md-3 col-sm-6">
+          <div class="support-item text-center animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+            <i class="fas fa-cloud fa-3x text-secondary"></i>
+            <h5>Depression</h5>
+          </div>
+        </div>
+        <!-- Support Item -->
+        <div class="col-md-3 col-sm-6">
+          <div class="support-item text-center animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+            <i class="fas fa-burn fa-3x text-secondary"></i>
+            <h5>Stress</h5>
+          </div>
+        </div>
+        <!-- Support Item -->
+        <div class="col-md-3 col-sm-6">
+          <div class="support-item text-center animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+            <i class="fas fa-hands-helping fa-3x text-secondary"></i>
+            <h5>Unpaid Carers</h5>
+          </div>
+        </div>
+        <!-- Support Item -->
+        <div class="col-md-3 col-sm-6">
+          <div class="support-item text-center animate__animated animate__fadeInUp" data-wow-delay="0.5s">
+            <i class="fas fa-cross fa-3x text-secondary"></i>
+            <h5>Bereavement</h5>
+          </div>
+        </div>
+        <!-- Support Item -->
+        <div class="col-md-3 col-sm-6">
+          <div class="support-item text-center animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+            <i class="fas fa-ghost fa-3x text-secondary"></i>
+            <h5>Loss & Trauma</h5>
+          </div>
+        </div>
+        <!-- Support Item -->
+        <div class="col-md-3 col-sm-6">
+          <div class="support-item text-center animate__animated animate__fadeInUp" data-wow-delay="0.7s">
+            <i class="fas fa-user-alt-slash fa-3x text-secondary"></i>
+            <h5>Identity Issues</h5>
+          </div>
+        </div>
+        <!-- Add more support items as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section class="about-me py-5" id="about">
+    <div class="container">
+      <h2 class="text-center mb-5">About Me</h2>
+      <div class="row align-items-center">
+        <div class="col-md-5">
+          <!-- Placeholder for Profile Image -->
+          <img
+            src="https://via.placeholder.com/400x400"
+            alt="Eveleen"
+            class="img-fluid rounded-circle mb-4 mb-md-0 animate__animated animate__fadeInLeft"
+          >
+        </div>
+        <div class="col-md-7 animate__animated animate__fadeInRight">
+          <p>
+            I'm Eveleen, a registered counsellor (British Association for Counselling and Psychotherapy) and an artist. These two passions are interconnected and provide effective support in wellbeing. I offer remote counselling services across Anglesey and Gwynedd.
+          </p>
+          <h4>Qualifications & Experience</h4>
+          <ul>
+            <li>Registered Member of the BACP</li>
+            <li>MSc Counselling, BSc Psychology</li>
+            <li>Cruse Bereavement Service</li>
+            <li>Trained in Bereavement Counselling</li>
+            <li>Experience with NHS Counselling Services</li>
+            <li>Specialist in Women's Health and Changes of Life</li>
           </ul>
         </div>
-        <div class="col-md-6">
-          <ul class="fa-ul">
-            <!-- Right Column Items -->
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Family Issues</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Alopecia</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Peri/Menopause</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Identity Issues</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Low Self-Worth</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Relationship Difficulties</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Support for Life-Limiting Illness</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Art as Therapy</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>Women's Health Issues</li>
-            <li><span class="fa-li"><i class="fas fa-check-circle"></i></span>And More...</li>
-          </ul>
+      </div>
+      <!-- Additional Image -->
+      <div class="row mt-5">
+        <div class="col-md-12 text-center">
+          <img src="https://via.placeholder.com/800x400" alt="Counselling Session" class="img-fluid rounded animate__animated animate__zoomIn">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Therapies Offered Section -->
-  <section class="therapies-offered py-5" id="therapies">
+  <!-- Pricing Section -->
+  <section class="pricing py-5 bg-light" id="pricing">
     <div class="container">
-      <h2 class="text-center mb-5">Therapies Offered</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <ul class="fa-ul">
-            <li><span class="fa-li"><i class="fas fa-hand-holding-heart"></i></span>Behavioural Therapy</li>
-            <li><span class="fa-li"><i class="fas fa-hand-holding-heart"></i></span>Psychodynamic Therapy</li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul class="fa-ul">
-            <li><span class="fa-li"><i class="fas fa-hand-holding-heart"></i></span>Person-Centred Therapy</li>
-            <li><span class="fa-li"><i class="fas fa-hand-holding-heart"></i></span>Integrative Counselling</li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul class="fa-ul">
-            <li><span class="fa-li"><i class="fas fa-hand-holding-heart"></i></span>Walk and Talk Therapy</li>
-            <li><span class="fa-li"><i class="fas fa-hand-holding-heart"></i></span>Somatic Therapy</li>
-          </ul>
+      <h2 class="text-center mb-5">Pricing</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6 animate__animated animate__fadeInUp">
+          <div class="pricing-card text-center p-4">
+            <h3>Standard Session</h3>
+            <p class="lead">50-minute session</p>
+            <p class="price">£45</p>
+            <p>Experience personalized therapy tailored to your needs.</p>
+            <a href="#contact" class="btn btn-primary btn-lg">Book a Session</a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Next Steps Section -->
-  <section class="next-steps py-5 bg-light" id="next-steps">
+  <section class="next-steps py-5" id="next-steps">
     <div class="container">
       <h2 class="text-center mb-5">Next Steps</h2>
-      <p class="lead text-center">
-        Get in touch for a chat. I offer a free 20-minute (no obligation) chat over Zoom, WhatsApp, or phone call. Together, we can tailor our sessions to meet your specific needs. Your wellbeing is what drives my therapeutic approach; therefore, if we are not compatible, I will suggest other resources and avenues.
+      <p class="lead text-center animate__animated animate__fadeInUp">
+        Get in touch for a chat. I offer a free 20-minute (no obligation) consultation over Zoom, WhatsApp, or phone call. Together, we can tailor our sessions to meet your specific needs.
       </p>
       <div class="text-center mt-4">
-        <a href="#contact" class="btn btn-primary btn-lg">Contact Me</a>
+        <a href="#contact" class="btn btn-primary btn-lg animate__animated animate__fadeInUp">Contact Me</a>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="contact py-5" id="contact">
+  <section class="contact py-5 bg-light" id="contact">
     <div class="container">
-      <h2 class="text-center mb-5">Contact Me</h2>
+      <h2 class="text-center mb-5">Contact</h2>
       <p class="text-center mb-4">
-        Please fill out the form below to request a free 20-minute consultation or for general inquiries.
+        Please fill out the form below to request a free consultation or for general inquiries.
       </p>
       <div class="row justify-content-center">
         <div class="col-md-8">
@@ -249,9 +356,9 @@
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
   ></script>
 
-  <!-- Custom JS for Improved Navigation -->
+  <!-- Custom JS for Improved Navigation and Animations -->
   <script>
-    // Navbar transparency on scroll
+    // Navbar background change on scroll
     window.addEventListener('scroll', function() {
       let navbar = document.querySelector('.navbar');
       if (window.scrollY > 50) {
@@ -270,7 +377,6 @@
     // Smooth scrolling
     document.querySelectorAll('a.nav-link').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
-        // e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
         });
