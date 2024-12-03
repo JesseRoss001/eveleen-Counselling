@@ -4,6 +4,11 @@
   --secondary-color: #E63946; /* Dark Red */
   --accent-color: #F1FAEE; /* White Accent */
   --text-color: #333;
+  --footer-bg-color: #1D3557; /* Dark Blue for Footer */
+  --footer-secondary-bg: #457B9D; /* Lighter Blue for Footer Sections */
+  --footer-text-color: #F1FAEE; /* White Text for Footer */
+  --footer-link-color: #F1FAEE; /* White Links */
+  --footer-link-hover-color: #E63946; /* Dark Red on Hover */
 }
 
 /* Global Styles */
@@ -34,7 +39,11 @@ header .navbar {
   background-color: rgba(29, 53, 87, 0.9); /* Dark Blue with opacity */
   padding: 1rem 0;
   transition: background-color 0.3s, box-shadow 0.3s;
+border-bottom: 2px solid #d62828;
 }
+
+.therapies-offered {border-top: 2px solid #1D3557;}
+
 
 header .navbar.scrolled {
   background-color: var(--primary-color);
@@ -77,9 +86,10 @@ header .navbar-nav .btn:focus {
 
 /* Hero Section Styles */
 .hero-section {
-  background-image: url('https://via.placeholder.com/1920x1080'); /* Replace with actual image */
+  background-image: url('images/eveleen-hero.jpg'); /* Replace with actual image */
   background-size: cover;
   background-position: center;
+height:70vh;
   color: var(--accent-color);
   padding: 150px 0 100px 0;
   position: relative;
@@ -113,6 +123,7 @@ header .navbar-nav .btn:focus {
 /* SEO Heavy Section Styles */
 .seo-section {
   background-color: #f8f9fa;
+border-top: 2px solid #d62828;
 }
 
 .seo-section h2 {
@@ -245,6 +256,8 @@ section h2::after {
   border-color: var(--secondary-color);
 }
 
+.text-red {color:#d62828 !important;}
+.text-blue {color:#1D3557 !important;}
 .btn-primary:hover,
 .btn-primary:focus {
   background-color: #d62828;
@@ -252,41 +265,70 @@ section h2::after {
 }
 
 /* Footer Styles */
-footer {
-  background-color: var(--primary-color);
-  color: var(--accent-color);
+.footer {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+border-top:2px solid  #d62828;
 }
 
-footer a {
-  color: var(--accent-color);
+.footer a.footer-link {
+  color: var(--footer-link-color);
+  text-decoration: none;
+}
+
+.footer a.footer-link:hover,
+.footer a.footer-link:focus {
+  color: var(--footer-link-hover-color);
   text-decoration: underline;
 }
 
-footer a:hover,
-footer a:focus {
-  color: #ccc;
-}
-
-footer ul.list-inline {
-  padding: 0;
-  margin: 0 0 1rem 0;
-}
-
-footer ul.list-inline li {
-  display: inline;
+.footer a.footer-social-link {
+  color: var(--footer-link-color);
   margin: 0 10px;
-}
-
-footer ul.list-inline a {
-  display: inline-block;
-}
-
-footer ul.list-inline a .fa-facebook {
   transition: color 0.3s;
 }
 
-footer ul.list-inline a:hover .fa-facebook,
-footer ul.list-inline a:focus .fa-facebook {
+.footer a.footer-social-link:hover,
+.footer a.footer-social-link:focus {
+  color: var(--secondary-color);
+}
+
+.footer .footer-heading {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer .social-icons a {
+  color: var(--footer-link-color);
+}
+
+.footer .social-icons a:hover,
+.footer .social-icons a:focus {
+  color: var(--secondary-color);
+}
+
+.footer-top {
+  background-color: var(--footer-bg-color);
+}
+
+.footer-divider {
+  height: 2px;
+  background-color: white;
+  margin: 0;
+}
+
+.footer-bottom {
+  background-color: var(--footer-bg-color);
+  color: var(--accent-color);
+}
+
+.footer-bottom a.footer-link {
+  color: var(--accent-color);
+}
+
+.footer-bottom a.footer-link:hover,
+.footer-bottom a.footer-link:focus {
   color: var(--secondary-color);
 }
 
@@ -373,6 +415,14 @@ footer ul.list-inline a:focus .fa-facebook {
     margin-top: 10px;
     width: 100%;
   }
+
+  .footer .row {
+    text-align: center;
+  }
+
+  .footer .col-md-4 {
+    margin-bottom: 1.5rem;
+  }
 }
 
 /* Additional Styles */
@@ -410,4 +460,43 @@ footer ul.list-inline a:focus .fa-facebook {
 .styled-list i {
   font-size: 1.2rem;
   color: var(--secondary-color);
+}
+
+/* Footer Specific Styles */
+.footer ul.list-inline {
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.footer ul.list-inline li {
+  display: inline;
+  margin: 0 10px;
+}
+
+.footer ul.list-inline a {
+  display: inline-block;
+}
+
+.footer ul.list-inline a .fa-facebook {
+  transition: color 0.3s;
+}
+
+.footer ul.list-inline a:hover .fa-facebook,
+.footer ul.list-inline a:focus .fa-facebook {
+  color: var(--secondary-color);
+}
+
+/* Footer Top Section */
+.footer-top .footer-heading {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer Bottom Section */
+.footer-bottom p {
+  margin: 0.5rem 0;
+}
+
+.footer-bottom a {
+  text-decoration: underline;
 }
