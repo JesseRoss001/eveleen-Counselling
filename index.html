@@ -27,6 +27,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
   />
   
+  <!-- Font Awesome Icons -->
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -85,7 +86,7 @@
               <a class="nav-link" href="#pricing" title="View My Pricing Plans">Pricing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link btn  text-white" href="#contact" title="Navigate to Contact section">Contact</a>
+              <a class="nav-link btn btn-outline-secondary text-dark" href="#contact" title="Navigate to Contact section">Contact</a>
             </li>
           </ul>
         </div>
@@ -97,7 +98,7 @@
   <main id="main-content">
     <!-- Hero Section -->
     <section class="hero-section d-flex align-items-center" id="intro" aria-labelledby="hero-heading">
-      <div class="container text-center">
+      <div class="container pt-3 mt-3 text-center ">
         <h1 class="display-4 animate__animated animate__fadeInDown" id="hero-heading">Welcome to Eveleen Power Counselling</h1>
         <p class="lead animate__animated animate__fadeInUp">
           Professional remote therapy services to help you navigate life's challenges.
@@ -110,6 +111,11 @@
     <section class="comprehensive-services py-5" id="comprehensive-services" aria-labelledby="comprehensive-services-heading">
       <div class="container">
         <h2 class="text-center mb-4 custom-beige" id="comprehensive-services-heading">Counselling Services in North Wales, Anglesey & Gwynedd</h2>
+        <div class="row d-flex justify-content-center align-items-center mb-4">
+          <div class="col-12 col-md-4 col-lg-4 py-2 d-flex justify-content-center align-items-center">
+            <img class="img-fluid py-2" src="images/EPClogo1.png" alt="Eveleen Power Counselling  Logo1 " title="Eveleen Power Counselling  Logo1" style="height:300px; width:300px;" loading="lazy">
+          </div>
+        </div>
         <div class="row d-flex justify-content-center align-items-center mb-4">
           <div class="col-md-8">
             <div class="row mb-4">
@@ -161,7 +167,7 @@
             </div>
             <!-- Call to Action -->
             <div class="text-center mt-5">
-              <a href="#contact" class="btn btn-primary btn-lg" title="Schedule Your Free Consultation">Schedule Your Free Consultation</a>
+              <a href="#contact" class="btn btn-outline-primary btn-lg" id="call-to-action-btn" title="Schedule Your Free Consultation">Schedule Your Free Consultation</a>
             </div>
           </div>
         </div>
@@ -171,7 +177,11 @@
     <!-- Therapies Offered Section -->
     <section class="therapies-offered py-5" id="therapies" aria-labelledby="therapies-heading">
       <div class="container">
+       
         <h2 class="text-center mb-2 custom-beige" id="therapies-heading">Therapies Offered</h2>
+        <div class="row d-flex justify-content-center align-items-center mb-4">
+       
+        </div>
         <div class="row g-4">
           <!-- Therapy Card 1 -->
           <article class="col-md-4">
@@ -180,7 +190,7 @@
                 <div class="icon mb-3">
                   <i class="fas fa-brain fa-3x custom-text-secondary" title="Behavioural Therapy Icon" aria-hidden="true"></i>
                 </div>
-                <h5 class="card-title text-white ">Behavioural Therapy</h5>
+                <h5 class="card-title text-white">Behavioural Therapy</h5>
                 <p class="card-text">Focuses on changing negative behaviours through conditioning techniques.</p>
               </div>
             </div>
@@ -234,7 +244,7 @@
             </div>
           </article>
           <!-- Therapy Card 6 -->
-       
+     
         </div>
       </div>
     </section>
@@ -282,8 +292,8 @@
     <section class="about-me py-5" id="about" aria-labelledby="about-heading">
       <div class="container">
         <h2 class="text-center mb-5 custom-beige" id="about-heading">About Me</h2>
-        <div class="row align-items-center">
-          <article class="col-md-5">
+        <div class="row d-flex justify-content-center align-items-center">
+          <article class="col-md-5 d-flex justify-content-center align-items-center">
             <!-- Profile Image -->
             <figure>
               <img
@@ -373,7 +383,6 @@
       <div class="container">
         <h2 class="text-center mb-2 custom-beige" id="next-steps-heading">Next Steps</h2>
         <div class="row mb-4 d-flex justify-content-center align-items-center">
-       
           <div class="col-md-8">
             <p class="lead text-center animate__animated animate__fadeInUp">
               Get in touch for a chat. I offer a free 20-minute (no obligation) consultation over Zoom, WhatsApp, or phone call. Together, we can tailor our sessions to meet your specific needs.
@@ -386,6 +395,52 @@
       </div>
     </section>
 
+
+    <!-- Contact Section -->
+    <section class="contact py-5" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 class="text-center mb-5 custom-beige" id="contact-heading">Contact</h2>
+        <p class="text-center mb-4">
+          Please fill out the form below to request a free consultation or for general enquiries.
+        </p>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <form id="web3-contact-form" aria-describedby="form-description">
+              <div id="form-description" class="visually-hidden">Contact form for requesting a free consultation or general enquiries.</div>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+                <input type="text" class="form-control" id="name" name="name" required aria-required="true" title="Enter your full name">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                <input type="email" class="form-control" id="email" name="email" required aria-required="true" title="Enter your email address">
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" title="Enter your phone number">
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">How can I help you? <span class="text-danger">*</span></label>
+                <textarea class="form-control" id="message" name="message" rows="5" required aria-required="true" title="Describe how I can assist you"></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg" title="Submit your contact form">Submit</button>
+              </div>
+            </form>
+            <!-- Success Message -->
+            <div id="success-message" class="mt-3 alert alert-success d-none" role="alert">
+              Thank you for contacting me! Your message has been successfully submitted.
+            </div>
+            <!-- Error Message -->
+            <div id="error-message" class="mt-3 alert alert-danger d-none" role="alert">
+              Oops! Something went wrong. Please try again later.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
     <!-- Areas of Support Section -->
     <section class="areas-of-support py-5" id="support" aria-labelledby="support-heading">
       <div class="container">
@@ -447,50 +502,6 @@
               <h5>Identity Issues</h5>
             </div>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact py-5" id="contact" aria-labelledby="contact-heading">
-      <div class="container">
-        <h2 class="text-center mb-5 custom-beige" id="contact-heading">Contact</h2>
-        <p class="text-center mb-4">
-          Please fill out the form below to request a free consultation or for general enquiries.
-        </p>
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <form id="web3-contact-form" aria-describedby="form-description">
-              <div id="form-description" class="visually-hidden">Contact form for requesting a free consultation or general enquiries.</div>
-              <div class="mb-3">
-                <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="name" name="name" required aria-required="true" title="Enter your full name">
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-                <input type="email" class="form-control" id="email" name="email" required aria-required="true" title="Enter your email address">
-              </div>
-              <div class="mb-3">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" name="phone" title="Enter your phone number">
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label">How can I help you? <span class="text-danger">*</span></label>
-                <textarea class="form-control" id="message" name="message" rows="5" required aria-required="true" title="Describe how I can assist you"></textarea>
-              </div>
-              <div class="text-center">
-                <button type="submit" class="btn btn-primary btn-lg" title="Submit your contact form">Submit</button>
-              </div>
-            </form>
-            <!-- Success Message -->
-            <div id="success-message" class="mt-3 alert alert-success d-none" role="alert">
-              Thank you for contacting me! Your message has been successfully submitted.
-            </div>
-            <!-- Error Message -->
-            <div id="error-message" class="mt-3 alert alert-danger d-none" role="alert">
-              Oops! Something went wrong. Please try again later.
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -573,13 +584,13 @@
         <div class="row">
           <!-- Logo Section -->
           <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
-            <img class="img-fluid my-3 my-md-0 border rounded" src="images/logo-design.png" alt="Eveleen Power Counselling Footer Logo" title="Eveleen Power Counselling Footer Logo" style="height:100px;width:100px;" loading="lazy">
-            <p class="mt-2">Professional remote counselling services tailored to your needs.</p>
+            <img class="img-fluid my-3 my-md-0 " src="images/1 (2).png" alt="Eveleen Power Counselling Footer Logo" title="Eveleen Power Counselling Footer Logo" style="height:200px;width:200px;" loading="lazy">
+            
           </div>
           <!-- Links Section -->
           <div class="col-md-4 mb-4 mb-md-0">
-            <h5 class="footer-heading">Quick Links</h5>
-            <ul class="list-unstyled">
+            <h5 class="footer-heading text-center">Quick Links</h5>
+            <ul class="list-unstyled text-center">
               <li><a href="#intro" class="footer-link" title="Navigate to Home section">Home</a></li>
               <li><a href="#therapies" class="footer-link" title="Learn about my Therapies Offered">Therapies</a></li>
               <li><a href="#support" class="footer-link" title="Explore Areas of Support">Areas of Support</a></li>
