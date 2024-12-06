@@ -1,502 +1,846 @@
-/* Define custom colors */
-:root {
-  --primary-color: #1D3557; /* Dark Blue */
-  --secondary-color: #E63946; /* Dark Red */
-  --accent-color: #F1FAEE; /* White Accent */
-  --text-color: #333;
-  --footer-bg-color: #1D3557; /* Dark Blue for Footer */
-  --footer-secondary-bg: #457B9D; /* Lighter Blue for Footer Sections */
-  --footer-text-color: #F1FAEE; /* White Text for Footer */
-  --footer-link-color: #F1FAEE; /* White Links */
-  --footer-link-hover-color: #E63946; /* Dark Red on Hover */
-}
-
-/* Global Styles */
-body {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--text-color);
-  scroll-behavior: smooth;
-}
-
-/* Skip Link for Accessibility */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--secondary-color);
-  color: #fff;
-  padding: 8px 16px;
-  z-index: 100;
-  transition: top 0.3s;
-}
-
-.skip-link:focus {
-  top: 10px;
-}
-
-/* Navbar Styles */
-header .navbar {
-  background-color: rgba(29, 53, 87, 0.9); /* Dark Blue with opacity */
-  padding: 1rem 0;
-  transition: background-color 0.3s, box-shadow 0.3s;
-border-bottom: 2px solid #d62828;
-}
-
-.therapies-offered {border-top: 2px solid #1D3557;}
-
-
-header .navbar.scrolled {
-  background-color: var(--primary-color);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-header .navbar-brand {
-  color: var(--accent-color);
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-header .navbar-nav .nav-link {
-  color: var(--accent-color);
-  margin-left: 1rem;
-  position: relative;
-}
-
-header .navbar-nav .nav-link:hover,
-header .navbar-nav .nav-link:focus {
-  color: var(--secondary-color);
-}
-
-header .navbar-nav .nav-link.active {
-  color: var(--secondary-color);
-  font-weight: bold;
-}
-
-header .navbar-nav .btn {
-  margin-left: 1rem;
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
-}
-
-header .navbar-nav .btn:hover,
-header .navbar-nav .btn:focus {
-  background-color: #d62828;
-  border-color: #d62828;
-}
-
-/* Hero Section Styles */
-.hero-section {
-  background-image: url('images/eveleen-hero.jpg'); /* Replace with actual image */
-  background-size: cover;
-  background-position: center;
-height:70vh;
-  color: var(--accent-color);
-  padding: 150px 0 100px 0;
-  position: relative;
-}
-
-.hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(29, 53, 87, 0.7); /* Overlay with dark blue */
-}
-
-.hero-section .container {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-section h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-section p {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-/* SEO Heavy Section Styles */
-.seo-section {
-  background-color: #f8f9fa;
-border-top: 2px solid #d62828;
-}
-
-.seo-section h2 {
-  color: var(--primary-color);
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.seo-section h2::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 3px;
-  background-color: var(--secondary-color);
-  margin-top: 8px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.seo-section .icon-box {
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.seo-section .icon-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.seo-section .icon-box h4 {
-  color: var(--primary-color);
-  margin-bottom: 10px;
-}
-
-.seo-section .icon-box p {
-  color: var(--text-color);
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* Section Titles */
-section h2 {
-  color: var(--primary-color);
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-section h2::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 3px;
-  background-color: var(--secondary-color);
-  margin-top: 8px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Therapy Cards */
-.therapy-card {
-  transition: transform 0.3s;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.therapy-card:hover {
-  transform: translateY(-10px);
-}
-
-.therapy-card .icon {
-  color: var(--secondary-color);
-}
-
-.therapy-card .card-title {
-  color: var(--primary-color);
-  margin-top: 10px;
-}
-
-.therapy-card .card-text {
-  color: var(--text-color);
-}
-
-/* Areas of Support */
-.areas-of-support .support-item {
-  transition: transform 0.3s;
-}
-
-.areas-of-support .support-item:hover {
-  transform: translateY(-10px);
-}
-
-.areas-of-support .support-item i {
-  color: var(--secondary-color);
-  margin-bottom: 10px;
-}
-
-.areas-of-support .support-item h5 {
-  color: var(--primary-color);
-  font-size: 1rem;
-}
-
-/* Pricing Section */
-.pricing-card {
-  background-color: var(--accent-color);
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.pricing-card h3 {
-  color: var(--primary-color);
-  margin-bottom: 15px;
-}
-
-.pricing-card .price {
-  font-size: 3rem;
-  color: var(--secondary-color);
-  margin-bottom: 15px;
-}
-
-.pricing-card p {
-  color: var(--text-color);
-}
-
-/* Buttons */
-.btn-primary {
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
-}
-
-.text-red {color:#d62828 !important;}
-.text-blue {color:#1D3557 !important;}
-.btn-primary:hover,
-.btn-primary:focus {
-  background-color: #d62828;
-  border-color: #d62828;
-}
-
-/* Footer Styles */
-.footer {
-  background-color: var(--footer-bg-color);
-  color: var(--footer-text-color);
-border-top:2px solid  #d62828;
-}
-
-.footer a.footer-link {
-  color: var(--footer-link-color);
-  text-decoration: none;
-}
-
-.footer a.footer-link:hover,
-.footer a.footer-link:focus {
-  color: var(--footer-link-hover-color);
-  text-decoration: underline;
-}
-
-.footer a.footer-social-link {
-  color: var(--footer-link-color);
-  margin: 0 10px;
-  transition: color 0.3s;
-}
-
-.footer a.footer-social-link:hover,
-.footer a.footer-social-link:focus {
-  color: var(--secondary-color);
-}
-
-.footer .footer-heading {
-  color: var(--accent-color);
-  margin-bottom: 1rem;
-  font-size: 1.2rem;
-}
-
-.footer .social-icons a {
-  color: var(--footer-link-color);
-}
-
-.footer .social-icons a:hover,
-.footer .social-icons a:focus {
-  color: var(--secondary-color);
-}
-
-.footer-top {
-  background-color: var(--footer-bg-color);
-}
-
-.footer-divider {
-  height: 2px;
-  background-color: white;
-  margin: 0;
-}
-
-.footer-bottom {
-  background-color: var(--footer-bg-color);
-  color: var(--accent-color);
-}
-
-.footer-bottom a.footer-link {
-  color: var(--accent-color);
-}
-
-.footer-bottom a.footer-link:hover,
-.footer-bottom a.footer-link:focus {
-  color: var(--secondary-color);
-}
-
-/* Privacy Modal Styles */
-.modal-content {
-  border-radius: 10px;
-}
-
-.modal-header h5 {
-  font-weight: bold;
-}
-
-.modal-footer {
-  border-top: none;
-}
-
-/* Cookie Banner Styles */
-.cookie-banner {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--primary-color);
-  color: var(--accent-color);
-  padding: 20px 0;
-  z-index: 1000;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-}
-
-.cookie-banner h5 {
-  margin-bottom: 10px;
-  color: var(--secondary-color);
-}
-
-.cookie-banner p {
-  margin-bottom: 10px;
-}
-
-.cookie-banner .btn {
-  background-color: var(--secondary-color);
-  border-color: var(--secondary-color);
-}
-
-.cookie-banner .btn:hover,
-.cookie-banner .btn:focus {
-  background-color: #d62828;
-  border-color: #d62828;
-}
-
-/* Animations */
-.animate__animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-/* Responsive Styles */
-@media (max-width: 767px) {
-  header .navbar-nav {
-    background-color: var(--primary-color);
-    padding: 1rem;
+/* ============================
+   Define Custom Colours
+   ============================ */
+   :root {
+    --blue: #3179C6; /* Primary Blue */
+    --light-blue: #88BDDF; /* Light Blue */
+    --cream: #FBF7D9; /* Cream */
+    --beige: #CEBC98; /* Beige */
+    --grey: #737369; /* Grey */
+    --white: #FFFFFF; /* White */
+    --dark-grey: #4A4A4A; /* Dark Grey for better contrast */
   }
-
-  header .navbar-collapse {
-    border-top: 1px solid #eee;
+  
+  /* ============================
+     Global Styles
+     ============================ */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--grey);
+    background-color: var(--white);
+    scroll-behavior: smooth;
   }
-
+  
+  /* Skip Link for Accessibility */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--blue);
+    color: var(--white);
+    padding: 8px 16px;
+    z-index: 100;
+    transition: top 0.3s;
+  }
+  
+  .skip-link:focus {
+    top: 10px;
+  }
+  
+  /* ============================
+     Navbar Styles
+     ============================ */
+  header .navbar {
+    background-color: var(--blue) !important;
+    padding: 1rem 0;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  header .navbar.scrolled {
+    background-color: var(--blue) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .navbar-brand {
+    color: var(--white) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  header .navbar-nav .nav-link {
+    color: var(--white) !important;
+    margin-left: 1rem;
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  header .navbar-nav .nav-link:hover,
+  header .navbar-nav .nav-link:focus {
+    color: var(--light-blue) !important;
+  }
+  
+  header .navbar-nav .nav-link.active {
+    color: var(--light-blue) !important;
+    font-weight: bold;
+  }
+  
+  header .navbar-nav .btn {
+    margin-left: 1rem;
+    background-color: var(--blue) !important;
+    border-color: var(--blue) !important;
+    color: var(--white) !important;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  header .navbar-nav .btn:hover,
+  header .navbar-nav .btn:focus {
+    background-color: var(--light-blue) !important;
+    border-color: var(--light-blue) !important;
+    color: var(--white) !important;
+  }
+  
+  /* ============================
+     Hero Section Styles
+     ============================ */
   .hero-section {
-    padding: 100px 0 80px 0;
+    background-image: url('images/eveleen-hero.jpg'); /* Ensure this image exists in the images folder */
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    color: var(--white);
+    padding: 150px 0 100px 0;
+    position: relative;
   }
-
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(49, 121, 198, 0.7); /* Blue overlay */
+  }
+  
+  .hero-section .container {
+    position: relative;
+    z-index: 2;
+  }
+  
   .hero-section h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--white) !important;
   }
-
+  
   .hero-section p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--white) !important;
   }
-
-  .cookie-banner .container {
-    flex-direction: column;
-    align-items: flex-start;
+  
+  .hero-section .btn {
+    background-color: var(--blue) !important;
+    border-color: var(--blue) !important;
+    transition: background-color 0.3s, border-color 0.3s;
   }
-
-  .cookie-banner .btn {
-    margin-top: 10px;
-    width: 100%;
+  
+  .hero-section .btn:hover,
+  .hero-section .btn:focus {
+    background-color: var(--light-blue) !important;
+    border-color: var(--light-blue) !important;
+    color: var(--white) !important;
   }
-
-  .footer .row {
+  
+  /* ============================
+     Comprehensive Services Section Styles
+     ============================ */
+  .comprehensive-services {
+    padding: 60px 0;
+    background-color: var(--white);
+    border-top: 2px solid var(--beige);
+    border-bottom: 2px solid var(--beige);
+  }
+  
+  .comprehensive-services h2 {
+    color: var(--beige) !important;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
     text-align: center;
   }
-
-  .footer .col-md-4 {
+  
+  .comprehensive-services h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--blue);
+    margin: 8px auto 0 auto;
+  }
+  
+  .comprehensive-services .icon-box {
+    padding: 20px;
+    background-color: var(--light-blue);
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .comprehensive-services .icon-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .comprehensive-services .icon-box h4 {
+    color: var(--beige) !important;
+    margin-bottom: 10px;
+  }
+  
+  .comprehensive-services .icon-box p {
+    color: var(--grey) !important;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  /* ============================
+     Therapies Offered Section Styles
+     ============================ */
+  .therapies-offered {
+    padding: 60px 0;
+    background-color: var(--white);
+    border-top: 2px solid var(--beige);
+    border-bottom: 2px solid var(--beige);
+  }
+  
+  .therapies-offered h2 {
+    color: var(--beige) !important;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .therapies-offered h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--blue);
+    margin: 8px auto 0 auto;
+  }
+  
+  .therapies-offered .therapy-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid var(--beige);
+    border-radius: 10px;
+    background-color: var(--light-blue);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .therapies-offered .therapy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .therapies-offered .therapy-card .icon {
+    color: var(--blue) !important;
+  }
+  
+  .therapies-offered .therapy-card .card-title {
+   color:white !important;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+  
+  .therapies-offered .therapy-card .card-text {
+    color: var(--grey) !important;
+  }
+  
+  /* ============================
+     Testimonials Section Styles
+     ============================ */
+  .testimonials {
+    padding: 60px 0;
+    background-color: var(--white);
+    border-top: 2px solid var(--beige);
+    border-bottom: 2px solid var(--beige);
+  }
+  
+  .testimonials h2 {
+    color: var(--beige) !important;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .testimonials h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--blue);
+    margin: 8px auto 0 auto;
+  }
+  
+  .testimonials .testimonial {
+    background-color: var(--light-blue);
+    padding: 20px;
+    border-left: 5px solid var(--blue);
+    border-radius: 5px;
+    transition: background-color 0.3s, border-left-color 0.3s;
+  }
+  
+  .testimonials .testimonial:hover {
+    background-color: var(--blue);
+    border-left-color: var(--light-blue);
+  }
+  
+  .testimonials .testimonial p {
+    color: white !important;
+    font-style: italic;
+  }
+  
+  .testimonials .testimonial .text-end {
+    color: #4A4A4A !important;
+    font-weight: bold;
+  }
+  
+  /* ============================
+     About Me Section Styles
+     ============================ */
+  .about-me {
+    padding: 60px 0;
+    background-color: var(--white);
+    border-top: 2px solid var(--beige);
+    border-bottom: 2px solid var(--beige);
+  }
+  
+  .about-me h2 {
+    color: var(--beige) !important;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .about-me h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--blue);
+    margin: 8px auto 0 auto;
+  }
+  
+  .about-me .styled-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about-me .styled-list li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--grey) !important;
+    border-bottom: 1px solid var(--beige);
+    padding-bottom: 5px;
+  }
+  
+  .about-me .styled-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .about-me .styled-list i {
+    font-size: 1.2rem;
+    color: var(--blue) !important;
+    margin-right: 0.5rem;
+  }
+  
+  /* ============================
+     Areas of Support Styles
+     ============================ */
+  .areas-of-support {
+    padding: 60px 0;
+    background-color: var(--white);
+    border-top: 2px solid var(--beige);
+    border-bottom: 2px solid var(--beige);
+  }
+  
+  .areas-of-support h2 {
+    color: var(--beige) !important;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .areas-of-support h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--blue);
+    margin: 8px auto 0 auto;
+  }
+  
+  .areas-of-support .support-item {
+    transition: transform 0.3s;
+  }
+  
+  .areas-of-support .support-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .areas-of-support .support-item i {
+    color: var(--blue) !important;
+    margin-bottom: 10px;
+  }
+  
+  .areas-of-support .support-item h5 {
+    color: var(--beige) !important;
+    font-size: 1rem;
+  }
+  
+  /* ============================
+     Pricing Section Styles
+     ============================ */
+  .pricing {
+    padding: 60px 0;
+    background-color: var(--white);
+    border-top: 2px solid var(--beige);
+    border-bottom: 2px solid var(--beige);
+  }
+  
+  .pricing h2 {
+    color: var(--beige) !important;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .pricing h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--blue);
+    margin: 8px auto 0 auto;
+  }
+  
+  .pricing .pricing-card {
+    background-color: #fafafa;
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .pricing .pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  
+  .pricing .pricing-card h3 {
+    color: var(--beige) !important;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  
+  .pricing .pricing-card .price {
+    font-size: 3rem;
+    color: var(--blue) !important;
+    margin-bottom: 15px;
+  }
+  
+  .pricing .pricing-card p {
+    color: var(--grey) !important;
+  }
+  
+  .pricing .pricing-card .btn {
+    margin-top: 15px;
+    background-color: var(--blue) !important;
+    border-color: var(--blue) !important;
+    color: var(--white) !important;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .pricing .pricing-card .btn:hover,
+  .pricing .pricing-card .btn:focus {
+    background-color: var(--light-blue) !important;
+    border-color: var(--light-blue) !important;
+    color: var(--white) !important;
+  }
+  
+  /* ============================
+     Next Steps Section Styles
+     ============================ */
+  .next-steps {
+    padding: 60px 0;
+    background-color: var(--white);
+    border-top: 2px solid var(--beige);
+    border-bottom: 2px solid var(--beige);
+  }
+  
+  .next-steps h2 {
+    color: var(--beige) !important;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .next-steps h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--blue);
+    margin: 8px auto 0 auto;
+  }
+  
+  .next-steps .btn {
+    background-color: var(--blue) !important;
+    border-color: var(--blue) !important;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .next-steps .btn:hover,
+  .next-steps .btn:focus {
+    background-color: var(--light-blue) !important;
+    border-color: var(--light-blue) !important;
+    color: var(--white) !important;
+  }
+  
+  /* ============================
+     Contact Section Styles
+     ============================ */
+  .contact {
+    padding: 60px 0;
+    background-color: var(--white);
+    border-top: 2px solid var(--beige);
+    border-bottom: 2px solid var(--beige);
+  }
+  
+  .contact h2 {
+    color: var(--beige) !important;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .contact h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--blue);
+    margin: 8px auto 0 auto;
+  }
+  
+  .contact p {
+    color: var(--grey) !important;
+    text-align: center;
     margin-bottom: 1.5rem;
   }
-}
-
-/* Additional Styles */
-.section {
-  padding: 60px 0;
-}
-
-.section.bg-light {
-  background-color: #f8f9fa;
-}
-
-.text-white a {
-  color: #fff;
-}
-
-.text-white a:hover {
-  color: #ddd;
-}
-
-/* Styled List */
-.styled-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.styled-list li {
-  margin-bottom: 0.8rem;
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
-  color: var(--text-color);
-}
-
-.styled-list i {
-  font-size: 1.2rem;
-  color: var(--secondary-color);
-}
-
-/* Footer Specific Styles */
-.footer ul.list-inline {
-  padding: 0;
-  margin: 0 0 1rem 0;
-}
-
-.footer ul.list-inline li {
-  display: inline;
-  margin: 0 10px;
-}
-
-.footer ul.list-inline a {
-  display: inline-block;
-}
-
-.footer ul.list-inline a .fa-facebook {
-  transition: color 0.3s;
-}
-
-.footer ul.list-inline a:hover .fa-facebook,
-.footer ul.list-inline a:focus .fa-facebook {
-  color: var(--secondary-color);
-}
-
-/* Footer Top Section */
-.footer-top .footer-heading {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-
-/* Footer Bottom Section */
-.footer-bottom p {
-  margin: 0.5rem 0;
-}
-
-.footer-bottom a {
-  text-decoration: underline;
-}
+  
+  .contact form {
+    background-color: var(--light-blue);
+    padding: 30px;
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact label {
+    color: var(--dark-grey) !important;
+  }
+  
+  .contact .form-control {
+    border: 1px solid var(--blue) !important;
+  }
+  
+  .contact .form-control:focus {
+    border-color: var(--blue) !important;
+    box-shadow: none !important;
+  }
+  
+  .contact .btn {
+    background-color: var(--blue) !important;
+    border-color: var(--blue) !important;
+    color: var(--white) !important;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .contact .btn:hover,
+  .contact .btn:focus {
+    background-color: var(--light-blue) !important;
+    border-color: var(--light-blue) !important;
+    color: var(--white) !important;
+  }
+  
+  /* ============================
+     Footer Styles
+     ============================ */
+  .footer {
+    background-color: var(--blue) !important;
+    color: var(--cream) !important;
+    border-top: 2px solid var(--beige) !important;
+  }
+  
+  .footer a.footer-link {
+    color: var(--cream) !important;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer a.footer-link:hover,
+  .footer a.footer-link:focus {
+    color: var(--light-blue) !important;
+    text-decoration: underline;
+  }
+  
+  .footer a.footer-social-link {
+    color: var(--cream) !important;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  
+  .footer a.footer-social-link:hover,
+  .footer a.footer-social-link:focus {
+    color: var(--light-blue) !important;
+  }
+  
+  .footer .footer-heading {
+    color: var(--cream) !important;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+  
+  .footer .social-icons a {
+    color: var(--cream) !important;
+    transition: color 0.3s;
+  }
+  
+  .footer .social-icons a:hover,
+  .footer .social-icons a:focus {
+    color: var(--light-blue) !important;
+  }
+  
+  .footer-top {
+    background-color: var(--blue) !important;
+  }
+  
+  .footer-divider {
+    height: 2px;
+    background-color: var(--beige) !important;
+    margin: 0;
+  }
+  
+  .footer-bottom {
+    background-color: var(--blue) !important;
+    color: var(--cream) !important;
+  }
+  
+  .footer-bottom a.footer-link {
+    color: var(--cream) !important;
+  }
+  
+  .footer-bottom a.footer-link:hover,
+  .footer-bottom a.footer-link:focus {
+    color: var(--light-blue) !important;
+  }
+  
+  /* ============================
+     Privacy Modal Styles
+     ============================ */
+  .modal-content {
+    border-radius: 10px;
+  }
+  
+  .modal-header h5 {
+    font-weight: bold;
+    color: var(--beige) !important;
+  }
+  
+  .modal-footer {
+    border-top: none;
+  }
+  
+  .modal-footer .btn-secondary {
+    background-color: var(--blue) !important;
+    border-color: var(--blue) !important;
+    color: var(--white) !important;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .modal-footer .btn-secondary:hover,
+  .modal-footer .btn-secondary:focus {
+    background-color: var(--light-blue) !important;
+    border-color: var(--light-blue) !important;
+    color: var(--white) !important;
+  }
+  
+  /* ============================
+     Cookie Consent Banner Styles
+     ============================ */
+  .cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--blue) !important;
+    color: var(--cream) !important;
+    padding: 20px 0;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .cookie-banner h5 {
+    margin-bottom: 10px;
+    color: var(--beige) !important;
+  }
+  
+  .cookie-banner p {
+    margin-bottom: 10px;
+    color: var(--cream) !important;
+  }
+  
+  .cookie-banner .btn {
+    background-color: var(--light-blue) !important;
+    border-color: var(--light-blue) !important;
+    color: var(--white) !important;
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .cookie-banner .btn:hover,
+  .cookie-banner .btn:focus {
+    background-color: var(--blue) !important;
+    border-color: var(--blue) !important;
+    color: var(--white) !important;
+  }
+  
+  /* ============================
+     Animations
+     ============================ */
+  .animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  
+  /* ============================
+     Responsive Styles
+     ============================ */
+  @media (max-width: 767px) {
+    header .navbar-nav {
+      background-color: var(--blue) !important;
+      padding: 1rem;
+    }
+  
+    header .navbar-collapse {
+      border-top: 1px solid #eee;
+    }
+  
+    .hero-section {
+      padding: 100px 0 80px 0;
+      height: auto;
+    }
+  
+    .hero-section h1 {
+      font-size: 2.5rem !important;
+    }
+  
+    .hero-section p {
+      font-size: 1.2rem !important;
+    }
+  
+    .cookie-banner .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .cookie-banner .btn {
+      margin-top: 10px;
+      width: 100% !important;
+    }
+  
+    .footer .row {
+      text-align: center !important;
+    }
+  
+    .footer .col-md-4 {
+      margin-bottom: 1.5rem !important;
+    }
+  }
+  
+  /* ============================
+     Additional Styles
+     ============================ */
+  .section {
+    padding: 60px 0;
+  }
+  
+  .text-white a {
+    color: var(--white) !important;
+  }
+  
+  .text-white a:hover {
+    color: #ddd !important;
+  }
+  
+  /* Styled List */
+  .styled-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .styled-list li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--grey) !important;
+    border-bottom: 1px solid var(--beige);
+    padding-bottom: 5px;
+  }
+  
+  .styled-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .styled-list i {
+    font-size: 1.2rem;
+    color: var(--blue) !important;
+    margin-right: 0.5rem;
+  }
+  
+  /* Footer Specific Styles */
+  .footer ul.list-unstyled {
+    padding: 0;
+    margin: 0 0 1rem 0;
+  }
+  
+  .footer ul.list-unstyled li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer ul.list-unstyled a {
+    display: inline-block;
+  }
+  
+  .footer ul.list-unstyled a:hover,
+  .footer ul.list-unstyled a:focus {
+    color: var(--light-blue) !important;
+  }
+  
+  /* Footer Top Section */
+  .footer-top .footer-heading {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  
+  /* Footer Bottom Section */
+  .footer-bottom p {
+    margin: 0.5rem 0;
+  }
+  
+  .footer-bottom a {
+    text-decoration: underline !important;
+  }
+  
+  /* ============================
+     Custom Classes
+     ============================ */
+  /* Border for Images */
+  .border-blue {
+    border: 3px solid var(--blue);
+  }
+  
